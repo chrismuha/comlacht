@@ -37,7 +37,7 @@ function submitForm(event) {
         <a href="#services">Vacation Rental</a>
         <a href="#services">Residential</a>
         <a href="#services">Co-Hosting / Property Management</a>
-        <a href="https://comlacht.wixsite.com/website/linens" target="_blank" rel="noopener">Places to Stay</a>
+        <a href="#places-to-stay">Places to Stay</a>
         <a href="#gallery">Gallery</a>
         <a href="#why-comlacht">Why Comlacht</a>
         <a href="#contact">Contact</a>
@@ -114,6 +114,18 @@ function submitForm(event) {
       </section>
 
       <ProjectGallery />
+
+      <section id="places-to-stay" class="places-to-stay marble">
+        <div class="stay-copy">
+          <p class="small-title">HOSTED BY COMLACHT SHORT TERM RENTAL</p>
+          <h2>Explore Tug Hill &amp; the Adirondack Region</h2>
+          <p>Discover places to stay while exploring Northern New York. Current property information and availability remain available through the original Comlacht listings page while the listings are migrated here.</p>
+          <div class="stay-actions">
+            <a class="book-button" href="https://comlacht.wixsite.com/website/linens" target="_blank" rel="noopener">VIEW PLACES TO STAY</a>
+            <a class="stay-contact" href="#contact">ASK ABOUT A STAY</a>
+          </div>
+        </div>
+      </section>
 
       <section id="contact" class="contact">
         <div class="contact-heading">
