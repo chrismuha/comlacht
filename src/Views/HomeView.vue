@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import logo from '@/assets/images/logo.jpg'
 import chamberBadge from '@/assets/images/badge.jpg'
+import ProjectGallery from '@/components/home/ProjectGallery.vue'
 
 const menuOpen = ref(false)
 const sent = ref(false)
@@ -36,6 +37,7 @@ function submitForm(event) {
         <a href="#services">Vacation Rental</a>
         <a href="#services">Residential</a>
         <a href="#services">Co-Hosting / Property Management</a>
+        <a href="#gallery">Gallery</a>
         <a href="#why-comlacht">Why Comlacht</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -109,6 +111,8 @@ function submitForm(event) {
         <p class="service-contact">For more information or to book services call:<br><a href="tel:+13157772989">315-777-2989</a></p>
         <p class="service-email">Email: <a href="mailto:comlacht@gmail.com">comlacht@gmail.com</a></p>
       </section>
+
+      <ProjectGallery />
 
       <section id="contact" class="contact">
         <div class="contact-heading">
