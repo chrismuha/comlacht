@@ -1,0 +1,87 @@
+@import url('fonts/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+body {
+    background-color: #e3e3e3;
+    font-family: 'Avenir';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 18pt;
+    font-family: 'Brandon Grot';
+    margin-top: -20px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 16pt;
+    font-family: 'Brandon Grot';
+    margin-top: -20px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 14pt;
+    font-family: 'Josefin Slab';
+    margin-top: -20px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    font-size: 42pt;
+    font-weight: 500;
+    font-family: 'Brandon Grot';
+    color: #444;
+}
+
+.header h2 {
+    font-size: 32pt;
+    font-weight: 500;
+    color: #444;
+    margin-top: -20px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.phone-number h1 {
+    font-size: 30px;
+    font-family: 'Brandon Grot';
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.body-text-1 {
+    font-size: 22pt;
+    font-family: 'Josefin Slab';
+    font-weight: 700;
+    line-height: 1.5rem;
+    margin: 2rem 0;
+}
+
+.body-text-2 {
+    font-size: 20pt;
+    font-family: 'Josefin Slab';
+    font-weight: 700;
+    line-height: 1.5rem;
+    margin: 2rem 0;
+}

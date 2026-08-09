@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-import logo from '@/assets/images/wix-logo.jpg'
+import logo from '@/assets/images/logo.jpg'
 import wordmark from '@/assets/images/wix-wordmark.jpg'
-import chamberBadge from '@/assets/images/wix-services.jpg'
+import chamberBadge from '@/assets/images/badge.jpg'
 
 const menuOpen = ref(false)
 const sent = ref(false)
