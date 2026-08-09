@@ -1,21 +1,9 @@
-var swiper = new Swiper(".mySwiper", {
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    loop: true,
-});
+import './assets/main.css'
 
-const seeMore = document.getElementById('seeMore')
-const seeLess = document.getElementById('seeLess')
-const moreText = document.getElementById('moreText')
-moreText.style.display = 'none'
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router/router'
 
-seeMore.addEventListener('click', (e) => {
-    moreText.style.display = 'block'
-    e.target.style.display = 'none'
-})
-seeLess.addEventListener('click', (e) => {
-    moreText.style.display = 'none'
-    seeMore.style.display = 'block'
-})
+const app = createApp(App)
+app.use(router)
+app.mount('#app')
