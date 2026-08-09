@@ -1,0 +1,35 @@
+{
+  "name": "vue-website-template-5",
+  "version": "1.0.0",
+  "description": "This template should help get you started developing with Vue 3 in Vite.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrismuha/vue-website-template-5.git"
+  },
+  "keywords": [
+    "vue",
+    "vite",
+    "template"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/chrismuha/vue-website-template-5/issues"
+  },
+  "homepage": "https://github.com/chrismuha/vue-website-template-5#readme",
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "vite": "^6.3.4"
+  }
+}
