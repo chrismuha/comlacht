@@ -9,27 +9,24 @@ const slides = [
 ]
 
 const currentIndex = ref(0)
-let pointerStart = null
+const slider = ref(null)
+let scrollFrame = null
 
 function show(index) {
-  currentIndex.value = (index + slides.length) % slides.length
+  const nextIndex = (index + slides.length) % slides.length
+  currentIndex.value = nextIndex
+  slider.value?.scrollTo({
+    left: nextIndex * slider.value.clientWidth,
+    behavior: 'smooth',
+  })
 }
 
-function pointerDown(event) {
-  if (event.target.closest('button, a')) return
-  pointerStart = event.clientX
-  event.currentTarget.setPointerCapture?.(event.pointerId)
-}
-
-function pointerUp(event) {
-  if (pointerStart === null) return
-  const distance = event.clientX - pointerStart
-  pointerStart = null
-  if (Math.abs(distance) >= 45) show(currentIndex.value + (distance < 0 ? 1 : -1))
-}
-
-function pointerCancel() {
-  pointerStart = null
+function syncCurrentSlide() {
+  if (scrollFrame) cancelAnimationFrame(scrollFrame)
+  scrollFrame = requestAnimationFrame(() => {
+    if (!slider.value?.clientWidth) return
+    currentIndex.value = Math.round(slider.value.scrollLeft / slider.value.clientWidth)
+  })
 }
 </script>
 
@@ -41,22 +38,24 @@ function pointerCancel() {
       <p>Real project photos will appear here as they are added.</p>
     </div>
 
-    <div class="gallery-slider" tabindex="0" aria-roledescription="carousel" aria-label="Comlacht project categories" @keydown.left="show(currentIndex - 1)" @keydown.right="show(currentIndex + 1)" @pointerdown="pointerDown" @pointerup="pointerUp" @pointercancel="pointerCancel">
-      <button type="button" class="gallery-arrow previous" aria-label="Previous project category" @click.stop="show(currentIndex - 1)">←</button>
-      <div class="gallery-track" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-        <article v-for="(slide, index) in slides" :key="slide.title" class="gallery-slide" :aria-hidden="index !== currentIndex">
-          <div class="photo-slot" aria-hidden="true">
-            <span>＋</span>
-            <small>PROJECT PHOTO</small>
-          </div>
-          <div class="slide-copy">
-            <p>{{ String(index + 1).padStart(2, '0') }} / {{ String(slides.length).padStart(2, '0') }}</p>
-            <h3>{{ slide.title }}</h3>
-            <p>{{ slide.description }}</p>
-          </div>
-        </article>
+    <div class="gallery-frame">
+      <button type="button" class="gallery-arrow previous" aria-label="Previous project category" @click="show(currentIndex - 1)">←</button>
+      <div ref="slider" class="gallery-slider" tabindex="0" aria-roledescription="carousel" aria-label="Comlacht project categories" @keydown.left.prevent="show(currentIndex - 1)" @keydown.right.prevent="show(currentIndex + 1)" @scroll.passive="syncCurrentSlide">
+        <div class="gallery-track">
+          <article v-for="(slide, index) in slides" :key="slide.title" class="gallery-slide" :aria-hidden="index !== currentIndex">
+            <div class="photo-slot" aria-hidden="true">
+              <span>＋</span>
+              <small>PROJECT PHOTO</small>
+            </div>
+            <div class="slide-copy">
+              <p>{{ String(index + 1).padStart(2, '0') }} / {{ String(slides.length).padStart(2, '0') }}</p>
+              <h3>{{ slide.title }}</h3>
+              <p>{{ slide.description }}</p>
+            </div>
+          </article>
+        </div>
       </div>
-      <button type="button" class="gallery-arrow next" aria-label="Next project category" @click.stop="show(currentIndex + 1)">→</button>
+      <button type="button" class="gallery-arrow next" aria-label="Next project category" @click="show(currentIndex + 1)">→</button>
     </div>
 
     <div class="gallery-dots" aria-label="Choose project category">
@@ -71,10 +70,12 @@ function pointerCancel() {
 .gallery-heading > p:first-child { margin: 0; color: #a8c7aa; font: 700 14px Avenir, sans-serif; letter-spacing: .25em; }
 .gallery-heading h2 { margin: 8px 0 9px; font: 500 clamp(36px, 6vw, 56px)/1 'Brandon Grot', Avenir, sans-serif; }
 .gallery-heading > p:last-child { margin: 0 0 35px; font: 600 17px 'Josefin Slab', serif; }
-.gallery-slider { position: relative; width: 100%; overflow: hidden; touch-action: pan-y; cursor: grab; outline-offset: -4px; }
+.gallery-frame { position: relative; }
+.gallery-slider { width: 100%; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; scrollbar-width: none; touch-action: pan-x pan-y; cursor: grab; outline-offset: -4px; }
+.gallery-slider::-webkit-scrollbar { display: none; }
 .gallery-slider:active { cursor: grabbing; }
-.gallery-track { display: flex; transition: transform .45s cubic-bezier(.22, 1, .36, 1); }
-.gallery-slide { min-width: 100%; padding: 0 90px; display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(230px, .75fr); align-items: stretch; }
+.gallery-track { display: flex; }
+.gallery-slide { min-width: 100%; padding: 0 90px; display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(230px, .75fr); align-items: stretch; scroll-snap-align: start; scroll-snap-stop: always; }
 .photo-slot { min-height: 420px; display: grid; place-content: center; gap: 12px; text-align: center; background: linear-gradient(#ffffff12, #ffffff08), url('../../assets/images/wix-hero.jpg') center / cover; border: 1px solid #ffffff40; color: #347c3c; }
 .photo-slot span { font: 300 70px/1 Avenir, sans-serif; }
 .photo-slot small { color: #282626; font: 700 12px Avenir, sans-serif; letter-spacing: .2em; }
@@ -98,5 +99,5 @@ function pointerCancel() {
   .previous { left: 7px; }
   .next { right: 7px; }
 }
-@media (prefers-reduced-motion: reduce) { .gallery-track { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .gallery-slider { scroll-behavior: auto; } }
 </style>
