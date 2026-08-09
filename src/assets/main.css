@@ -34,6 +34,15 @@ button, input, select, textarea { font: inherit; }
 .lead { max-width: 790px; margin: 0 auto 27px; font: 700 clamp(20px, 3.2vw, 27px)/1.45 'Josefin Slab', serif; }
 .counties { max-width: 760px; margin: 0 auto 14px; font: 700 20px/1.5 'Josefin Slab', serif; }
 
+.proof-section { padding: 58px 45px 65px; text-align: center; background: #f0f1f2; border-top: 1px solid #ddd; }
+.proof-section > h2 { max-width: 720px; margin: 10px auto 38px; font: 500 clamp(29px, 5vw, 43px)/1.15 'Brandon Grot', Avenir, sans-serif; }
+.proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.proof-grid article { min-height: 220px; padding: 25px 16px 22px; background: white; border-top: 3px solid #347c3c; box-shadow: 0 4px 14px #00000012; }
+.proof-grid span { width: 62px; height: 62px; margin: 0 auto 17px; display: grid; place-items: center; border: 2px solid #347c3c; border-radius: 50%; color: #347c3c; font: 700 28px Avenir, sans-serif; }
+.proof-grid img { width: 68px; height: 64px; margin: 0 auto 15px; object-fit: contain; }
+.proof-grid h3 { margin: 0 0 10px; color: #2f7135; font: 500 21px 'Brandon Grot', Avenir, sans-serif; }
+.proof-grid p { margin: 0; font: 600 16px/1.45 'Josefin Slab', serif; }
+
 .services { padding: 60px 45px 55px; text-align: center; border-block: 1px solid #d0d0d0; }
 .services h2 { margin: 0 0 42px; font: 400 clamp(40px, 7vw, 62px)/1 Anton, sans-serif; text-decoration: underline; letter-spacing: .04em; }
 .services-grid { display: grid; grid-template-columns: 1fr 225px 1fr; justify-content: center; align-items: center; gap: 35px; }
@@ -75,10 +84,16 @@ footer p { margin: 8px 0 0; font-size: 13px; }
   .intro-row { grid-template-columns: 1fr; gap: 6px; }
   .intro-row img { margin: 0 auto; }
   .about { padding: 52px 22px 58px; }
+  .proof-section { padding: 48px 20px 54px; }
+  .proof-grid { grid-template-columns: 1fr 1fr; }
   .services { padding: 48px 20px; }
   .services-grid { grid-template-columns: 1fr; gap: 22px; }
   .services-grid > img { grid-row: 2; margin: 0 auto; width: 190px; }
   .contact { padding: 52px 22px; }
   form { grid-template-columns: 1fr; gap: 22px; }
   .wide, form button { grid-column: 1; }
+}
+
+@media (max-width: 480px) {
+  .proof-grid { grid-template-columns: 1fr; }
 }

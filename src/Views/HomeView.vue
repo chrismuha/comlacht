@@ -36,7 +36,8 @@ function submitForm(event) {
         <a href="#services">Vacation Rental</a>
         <a href="#services">Residential</a>
         <a href="#services">Co-Hosting / Property Management</a>
-        <a href="#contact">Places to Stay</a>
+        <a href="#why-comlacht">Why Comlacht</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -59,6 +60,33 @@ function submitForm(event) {
         <p class="lead">Cleaning &amp; Property Service Specializing in Vacation Rental Operations and Hospitality with the guest experience in mind.</p>
         <p class="counties">Serving: Lewis, Jefferson, Herkimer, Hamilton, Oneida and St. Lawrence</p>
         <p>Owned and Operated out of Lewis County, New York.</p>
+      </section>
+
+      <section id="why-comlacht" class="proof-section">
+        <p class="small-title">WHY COMLACHT</p>
+        <h2>Local property care you can call directly</h2>
+        <div class="proof-grid">
+          <article>
+            <span aria-hidden="true">✓</span>
+            <h3>Insured D.B.A.</h3>
+            <p>An insured business serving Northern New York.</p>
+          </article>
+          <article>
+            <span aria-hidden="true">✓</span>
+            <h3>Owner Operated</h3>
+            <p>Contact the locally based owner directly about your property needs.</p>
+          </article>
+          <article>
+            <img :src="chamberBadge" alt="Lewis County Chamber of Commerce — Adirondacks Tug Hill" />
+            <h3>Lewis County Chamber</h3>
+            <p>Connected with the Lewis County Chamber of Commerce.</p>
+          </article>
+          <article>
+            <span aria-hidden="true">6</span>
+            <h3>Counties Served</h3>
+            <p>Lewis, Jefferson, Herkimer, Hamilton, Oneida and St. Lawrence.</p>
+          </article>
+        </div>
       </section>
 
       <section id="services" class="services marble">
