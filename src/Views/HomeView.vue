@@ -37,6 +37,7 @@ function submitForm(event) {
         <a href="#services">Vacation Rental</a>
         <a href="#services">Residential</a>
         <a href="#services">Co-Hosting / Property Management</a>
+        <a href="https://comlacht.wixsite.com/website/linens" target="_blank" rel="noopener">Places to Stay</a>
         <a href="#gallery">Gallery</a>
         <a href="#why-comlacht">Why Comlacht</a>
         <a href="#contact">Contact</a>
