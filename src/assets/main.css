@@ -1,87 +1,83 @@
 @import url('fonts/stylesheet.css');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: 0;
-}
+:root { color: #282626; font-family: Avenir, Arial, sans-serif; font-synthesis: none; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #e7e7e7; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; }
+.site-shell { width: min(980px, 100%); margin: 0 auto; background: white; box-shadow: 0 0 24px #0002; }
+.marble { background: #f6f6f4 url('./images/wix-hero.jpg') center / cover; }
 
-body {
-    background-color: #e3e3e3;
-    font-family: 'Avenir';
-}
+.site-header { min-height: 90px; padding: 14px 28px; display: flex; align-items: center; gap: 28px; background: #fff; border-bottom: 1px solid #ddd; position: relative; z-index: 10; }
+.brand img { width: 145px; display: block; }
+.site-header nav { margin-left: auto; display: flex; align-items: center; justify-content: flex-end; gap: 25px; }
+.site-header nav a { color: #282626; text-decoration: none; font-size: 14px; font-weight: 500; white-space: nowrap; }
+.site-header nav a:hover { color: #2f7135; }
+.menu-button { display: none; background: none; padding: 8px; margin-left: auto; }
+.menu-button span { width: 27px; height: 2px; background: #282626; display: block; margin: 6px; }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+.intro { min-height: 450px; padding: 58px 32px 48px; text-align: center; border-bottom: 1px solid #d0d0d0; }
+.eyebrow { margin: 0 0 30px; font: 500 clamp(24px, 4vw, 38px)/1.2 Georgia, serif; letter-spacing: .04em; }
+.intro-row { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: 1fr 210px 1fr; align-items: center; gap: 28px; }
+.intro-row p { font: italic 600 17px Georgia, serif; }
+.intro-row img { width: 210px; box-shadow: 0 3px 13px #0003; }
+.wordmark { width: 290px; max-width: 70%; margin: 22px auto 25px; display: block; mix-blend-mode: multiply; }
+.book-button { display: inline-block; padding: 13px 38px; border: 2px solid #323232; border-radius: 24px; background: #323232; color: white; text-decoration: none; font-weight: 700; letter-spacing: .08em; transition: .2s; }
+.book-button:hover { color: #323232; background: white; }
 
-a:hover {
-    text-decoration: none;
-}
+.about { padding: 68px max(24px, 8vw) 76px; text-align: center; }
+.small-title { margin: 0; font-size: 17px; letter-spacing: .25em; }
+.about h1 { margin: 8px 0 17px; font: 500 clamp(37px, 7vw, 58px)/1.05 'Brandon Grot', Avenir, sans-serif; letter-spacing: .04em; }
+.phone { display: inline-block; margin-bottom: 32px; color: #2f7135; font-size: clamp(28px, 5vw, 38px); font-weight: 700; }
+.lead { max-width: 790px; margin: 0 auto 27px; font: 600 clamp(20px, 3.2vw, 27px)/1.45 Georgia, serif; }
+.counties { max-width: 760px; margin: 0 auto 14px; font: 600 20px/1.5 Georgia, serif; }
 
-h1 {
-    font-size: 18pt;
-    font-family: 'Brandon Grot';
-    margin-top: -20px;
-    position: relative;
-    margin-bottom: 2rem;
-}
+.services { padding: 60px 45px 55px; text-align: center; border-block: 1px solid #d0d0d0; }
+.services h2 { margin: 0 0 42px; font: 500 clamp(40px, 7vw, 62px)/1 Avenir, sans-serif; text-decoration: underline; letter-spacing: .04em; }
+.services-grid { display: grid; grid-template-columns: 1fr 225px 1fr; justify-content: center; align-items: center; gap: 35px; }
+.services-grid > img { width: 225px; border-radius: 50%; }
+.service-list { display: grid; gap: 14px; }
+.service-list a { min-height: 40px; display: grid; place-items: center; padding: 8px 12px; background: #292929; border: 1px solid #347c3c; color: white; text-decoration: none; font-size: 16px; transition: .2s; }
+.service-list a:hover { background: white; color: #292929; }
+.service-contact { margin: 42px 0 5px; font: 600 20px/1.55 Georgia, serif; }
+.service-contact a { font-size: 31px; color: #2f7135; }
+.service-email { margin: 4px 0; font: 600 21px Georgia, serif; }
 
-h2 {
-    font-size: 16pt;
-    font-family: 'Brandon Grot';
-    margin-top: -20px;
-    position: relative;
-    margin-bottom: 2rem;
-}
+.contact { padding: 65px 60px 70px; background: #eff0f1; }
+.contact-heading { text-align: center; margin-bottom: 44px; }
+.contact-heading p { margin: 0 0 5px; font: italic 17px Georgia, serif; }
+.contact-heading h2 { margin: 0 0 12px; font: 500 clamp(31px, 5vw, 46px) Georgia, serif; }
+.contact-heading a { color: #2f7135; font-size: 23px; font-weight: 700; }
+form { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 30px; }
+label { display: grid; gap: 8px; font: italic 700 15px Georgia, serif; }
+input, select, textarea { width: 100%; border: 0; border-bottom: 1px solid #777; border-radius: 0; padding: 12px 4px; background: white; color: #282626; outline: none; }
+input:focus, select:focus, textarea:focus { border-bottom: 2px solid #2f7135; }
+.wide { grid-column: 1 / -1; }
+form button { grid-column: 1 / -1; width: 130px; height: 46px; margin: 0 auto; border: 2px solid #323232; border-radius: 23px; background: transparent; cursor: pointer; }
+form button:hover { background: #323232; color: white; }
+.thanks { text-align: center; padding: 45px 0; }
+.thanks h3 { font: 500 30px Georgia, serif; }
+.thanks a { color: #2f7135; }
+footer { padding: 30px; text-align: center; background: #fff; color: #666; }
+footer img { width: 120px; }
+footer p { margin: 8px 0 0; font-size: 13px; }
 
-h3 {
-    font-size: 14pt;
-    font-family: 'Josefin Slab';
-    margin-top: -20px;
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.header h1 {
-    font-size: 42pt;
-    font-weight: 500;
-    font-family: 'Brandon Grot';
-    color: #444;
-}
-
-.header h2 {
-    font-size: 32pt;
-    font-weight: 500;
-    color: #444;
-    margin-top: -20px;
-    position: relative;
-    margin-bottom: 2rem;
-}
-
-.phone-number h1 {
-    font-size: 30px;
-    font-family: 'Brandon Grot';
-    font-weight: 400;
-    text-decoration: underline;
-}
-
-.body-text-1 {
-    font-size: 22pt;
-    font-family: 'Josefin Slab';
-    font-weight: 700;
-    line-height: 1.5rem;
-    margin: 2rem 0;
-}
-
-.body-text-2 {
-    font-size: 20pt;
-    font-family: 'Josefin Slab';
-    font-weight: 700;
-    line-height: 1.5rem;
-    margin: 2rem 0;
+@media (max-width: 760px) {
+  .site-header { min-height: 72px; padding: 10px 16px; }
+  .brand img { width: 120px; }
+  .menu-button { display: block; }
+  .site-header nav { display: none; position: absolute; inset: 72px 0 auto; padding: 16px 20px 22px; background: white; box-shadow: 0 8px 14px #0002; flex-direction: column; align-items: stretch; gap: 0; }
+  .site-header nav.open { display: flex; }
+  .site-header nav a { padding: 12px; border-bottom: 1px solid #eee; white-space: normal; }
+  .intro { min-height: auto; padding: 42px 20px; }
+  .intro-row { grid-template-columns: 1fr; gap: 6px; }
+  .intro-row img { margin: 0 auto; }
+  .about { padding: 52px 22px 58px; }
+  .services { padding: 48px 20px; }
+  .services-grid { grid-template-columns: 1fr; gap: 22px; }
+  .services-grid > img { grid-row: 2; margin: 0 auto; width: 190px; }
+  .contact { padding: 52px 22px; }
+  form { grid-template-columns: 1fr; gap: 22px; }
+  .wide, form button { grid-column: 1; }
 }
