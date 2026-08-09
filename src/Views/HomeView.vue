@@ -3,8 +3,9 @@ import { ref } from 'vue'
 import logo from '@/assets/images/logo.jpg'
 import chamberBadge from '@/assets/images/badge.jpg'
 import ProjectGallery from '@/components/home/ProjectGallery.vue'
+import SiteHeader from '@/components/base/SiteHeader.vue'
+import SiteFooter from '@/components/base/SiteFooter.vue'
 
-const menuOpen = ref(false)
 const sent = ref(false)
 
 function submitForm(event) {
@@ -25,24 +26,7 @@ function submitForm(event) {
 
 <template>
   <div class="site-shell">
-    <header class="site-header">
-      <a class="brand" href="#home" aria-label="Comlacht home">
-        <img :src="logo" alt="Comlacht" />
-      </a>
-      <button class="menu-button" type="button" aria-label="Toggle navigation" @click="menuOpen = !menuOpen">
-        <span></span><span></span><span></span>
-      </button>
-      <nav :class="{ open: menuOpen }" @click="menuOpen = false">
-        <a href="#home">HOME</a>
-        <a href="#services">Vacation Rental</a>
-        <a href="#services">Residential</a>
-        <a href="#services">Co-Hosting / Property Management</a>
-        <a href="#places-to-stay">Places to Stay</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#why-comlacht">Why Comlacht</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <SiteHeader />
 
     <main id="home">
       <section class="intro marble">
@@ -96,10 +80,10 @@ function submitForm(event) {
         <h2>SERVICES</h2>
         <div class="services-grid">
           <div class="service-list">
-            <a href="#contact">Vacation Rental</a>
-            <a href="#contact">Co-Hosting</a>
-            <a href="#contact">Business</a>
-            <a href="#contact">Residential</a>
+            <router-link to="/vacation-rental">Vacation Rental</router-link>
+            <router-link to="/co-hosting">Co-Hosting</router-link>
+            <router-link to="/commercial">Business / Commercial</router-link>
+            <router-link to="/residential">Residential</router-link>
           </div>
           <img :src="chamberBadge" alt="Lewis County Chamber of Commerce — Adirondacks Tug Hill" />
           <div class="service-list">
@@ -119,9 +103,9 @@ function submitForm(event) {
         <div class="stay-copy">
           <p class="small-title">HOSTED BY COMLACHT SHORT TERM RENTAL</p>
           <h2>Explore Tug Hill &amp; the Adirondack Region</h2>
-          <p>Discover places to stay while exploring Northern New York. Current property information and availability remain available through the original Comlacht listings page while the listings are migrated here.</p>
+          <p>Discover Comlacht-hosted stays in Turin, Brantingham, and Star Lake, with direct links to current availability and booking details.</p>
           <div class="stay-actions">
-            <a class="book-button" href="https://comlacht.wixsite.com/website/linens" target="_blank" rel="noopener">VIEW PLACES TO STAY</a>
+            <router-link class="book-button" to="/places-to-stay">VIEW PLACES TO STAY</router-link>
             <a class="stay-contact" href="#contact">ASK ABOUT A STAY</a>
           </div>
         </div>
@@ -156,9 +140,6 @@ function submitForm(event) {
       </section>
     </main>
 
-    <footer>
-      <img :src="logo" alt="Comlacht" />
-      <p>Cleaning &amp; Property Services · Northern New York</p>
-    </footer>
+    <SiteFooter />
   </div>
 </template>

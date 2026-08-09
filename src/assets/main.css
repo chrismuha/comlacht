@@ -83,6 +83,102 @@ footer { padding: 30px; text-align: center; background: #fff; color: #666; }
 footer img { width: 120px; }
 footer p { margin: 8px 0 0; font-size: 13px; }
 
+.stay-page-shell { background: #f7f7f5 url('./images/places-background.jpg') center top / cover fixed; }
+.stay-hero { min-height: 590px; position: relative; display: grid; place-items: center; overflow: hidden; text-align: center; border-bottom: 1px solid #d0d0d0; isolation: isolate; }
+.stay-hero-media { position: absolute; inset: 0; z-index: -2; background: #173a1a url('./images/region-poster.jpg') center / cover; }
+.stay-hero-media video { width: 100%; height: 100%; display: block; object-fit: cover; }
+.stay-hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, #09160c80, #09160cb8); }
+.stay-hero-content { width: 100%; padding: 90px 55px 76px; color: white; }
+.stay-hero .small-title { margin-bottom: 20px; text-shadow: 0 2px 10px #0009; }
+.stay-hero h1 { max-width: 880px; margin: 0; font: 500 clamp(48px, 8vw, 76px)/.98 'Brandon Grot', Avenir, sans-serif; letter-spacing: .015em; text-transform: uppercase; }
+.stay-hero-content > p:not(.small-title) { max-width: 610px; margin: 28px auto; font: 700 20px/1.5 'Josefin Slab', serif; text-shadow: 0 2px 12px #000; }
+.stay-hero-link { display: inline-flex; gap: 12px; align-items: center; min-height: 50px; padding: 13px 25px; border: 2px solid #fff; border-radius: 28px; background: #fff; color: #173a1a; font-weight: 800; letter-spacing: .04em; text-decoration: none; box-shadow: 0 5px 18px #0006; cursor: pointer; }
+.stay-hero-link:hover, .stay-hero-link:focus-visible { background: #dcebdd; border-color: #dcebdd; color: #102b13; outline: 3px solid #fff; outline-offset: 3px; }
+.stay-listings { padding: 78px 45px 86px; background: #ffffffd9; backdrop-filter: blur(2px); }
+.stay-section-heading { max-width: 690px; margin: 0 auto 46px; text-align: center; }
+.stay-section-heading h2 { margin: 10px 0 16px; font: 500 clamp(34px, 5vw, 49px)/1.08 'Brandon Grot', Avenir, sans-serif; }
+.stay-section-heading > p:last-child { margin: 0; font: 600 18px/1.5 'Josefin Slab', serif; }
+.stay-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.stay-card { min-width: 0; padding: 28px 24px 26px; display: flex; flex-direction: column; background: #f2f3f1; border-top: 4px solid #347c3c; box-shadow: 0 7px 22px #00000010; }
+.stay-card-number { color: #347c3c; font: 700 13px/1 Avenir, sans-serif; letter-spacing: .14em; }
+.stay-region { margin: 30px 0 7px; color: #60665f; font-size: 12px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.stay-card h3 { margin: 0; font: 500 28px/1.08 'Brandon Grot', Avenir, sans-serif; }
+.stay-location { margin: 11px 0 24px; color: #2f7135; font-weight: 700; }
+.stay-description { margin: 0 0 30px; font: 600 17px/1.5 'Josefin Slab', serif; }
+.stay-card > a { margin-top: auto; align-self: flex-start; padding: 10px 0 5px; border-bottom: 1px solid currentColor; color: #255e2b; font-weight: 700; text-decoration: none; }
+.stay-card > a:hover, .stay-card > a:focus-visible { color: #173a1a; }
+.stay-help { padding: 62px 60px; display: flex; align-items: center; justify-content: space-between; gap: 40px; background: #292929; color: #fff; }
+.stay-help h2 { margin: 8px 0 10px; font: 500 clamp(31px, 5vw, 44px)/1.1 'Brandon Grot', Avenir, sans-serif; }
+.stay-help p:last-child { margin: 0; font: 600 18px/1.45 'Josefin Slab', serif; }
+.stay-help-actions { flex: 0 0 auto; display: grid; justify-items: center; gap: 13px; }
+.stay-help .book-button { border-color: #fff; background: #fff; color: #292929; }
+.stay-help .book-button:hover { background: transparent; color: #fff; }
+.stay-help-actions > a:last-child { color: #fff; font-weight: 700; }
+
+.residential-hero { padding: 65px 55px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(270px, 380px); align-items: center; gap: 55px; }
+.residential-hero-copy h1 { margin: 10px 0 20px; font: 500 clamp(43px, 6vw, 65px)/1 'Brandon Grot', Avenir, sans-serif; text-transform: uppercase; }
+.residential-hero-copy > p:not(.small-title) { margin: 0 0 28px; font: 700 20px/1.5 'Josefin Slab', serif; }
+.residential-hero > img { width: 100%; max-height: 650px; object-fit: contain; box-shadow: 0 10px 30px #0002; }
+.residential-services { padding: 72px 55px 78px; background: #fff; }
+.residential-services-heading { max-width: 700px; margin: 0 auto 38px; text-align: center; }
+.residential-services-heading h2, .residential-schedule h2, .linen-service h2 { margin: 9px 0 14px; font: 500 clamp(34px, 5vw, 48px)/1.08 'Brandon Grot', Avenir, sans-serif; }
+.residential-services-heading > p:last-child { font: 600 18px/1.5 'Josefin Slab', serif; }
+.residential-service-list { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; list-style: none; border: 1px solid #d8ded7; }
+.residential-service-list li { min-height: 58px; padding: 15px 18px 15px 42px; position: relative; display: flex; align-items: center; border: 1px solid #e4e7e3; font-size: 15px; font-weight: 600; }
+.residential-service-list li::before { content: '✓'; position: absolute; left: 17px; color: #347c3c; font-weight: 800; }
+.residential-schedule { padding: 70px 60px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; background: #eff0f1; }
+.residential-schedule > div > p:not(.small-title) { font: 600 18px/1.55 'Josefin Slab', serif; }
+.minimum-fee { color: #2f7135; font-size: 22px !important; font-weight: 800 !important; text-transform: uppercase; }
+.residential-schedule img { width: 100%; height: 390px; object-fit: cover; box-shadow: 0 8px 24px #0002; }
+.residential-gallery { padding: 76px 45px 82px; background: #282626; color: #fff; }
+.residential-gallery-heading { margin-bottom: 35px; text-align: center; }
+.residential-gallery-heading h2 { margin: 8px 0; font: 500 clamp(35px, 5vw, 48px)/1.1 'Brandon Grot', Avenir, sans-serif; }
+.residential-photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.residential-photo-grid figure, .cabinet-cleaning figure { margin: 0; }
+.residential-photo-grid img { width: 100%; height: 300px; display: block; object-fit: cover; }
+.residential-photo-grid figcaption { min-height: 65px; padding: 18px; background: #347c3c; font-weight: 700; text-align: center; }
+.cabinet-cleaning { margin-top: 45px; display: grid; grid-template-columns: .8fr 1fr 1fr; align-items: center; gap: 20px; }
+.cabinet-cleaning h3 { margin: 8px 0 0; font: 500 33px/1.1 'Brandon Grot', Avenir, sans-serif; }
+.cabinet-cleaning figure { position: relative; }
+.cabinet-cleaning img { width: 100%; height: 220px; display: block; object-fit: cover; }
+.cabinet-cleaning figure span { position: absolute; z-index: 1; top: 12px; left: 12px; padding: 6px 10px; background: #fff; color: #282626; font-size: 12px; font-weight: 800; text-transform: uppercase; }
+.linen-service { padding: 65px 60px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 55px; background: #fff; }
+.linen-service p:not(.small-title) { font: 600 18px/1.55 'Josefin Slab', serif; }
+.detail-page-shell { background: #fff; }
+.detail-hero { padding: 80px 55px; text-align: center; }
+.detail-hero h1, .commercial-hero h1 { max-width: 800px; margin: 10px auto 20px; font: 500 clamp(43px, 7vw, 68px)/1 'Brandon Grot', Avenir, sans-serif; text-transform: uppercase; }
+.detail-hero > p:not(.small-title) { max-width: 720px; margin: 0 auto 30px; font: 700 20px/1.5 'Josefin Slab', serif; }
+.hosting-rate { padding: 62px 70px; display: grid; grid-template-columns: 230px 1fr; align-items: center; gap: 55px; background: #282626; color: #fff; }
+.rate-mark { width: 205px; height: 205px; display: grid; place-content: center; text-align: center; border: 3px solid #a8c7aa; border-radius: 50%; }
+.rate-mark strong { color: #c9e5cb; font: 500 62px/1 'Brandon Grot', Avenir, sans-serif; }
+.rate-mark span { margin-top: 7px; font-weight: 700; text-transform: uppercase; }
+.hosting-rate h2, .hosting-service-columns h2, .commercial-extras h2 { margin: 8px 0 13px; font: 500 clamp(31px, 5vw, 45px)/1.1 'Brandon Grot', Avenir, sans-serif; }
+.hosting-rate p:last-child { font: 600 19px/1.5 'Josefin Slab', serif; }
+.hosting-services { padding: 72px 55px 80px; background: #f3f3f1 url('./images/places-background.jpg') center / cover; }
+.platforms { margin: 0 auto 52px; display: flex; align-items: center; justify-content: center; gap: 55px; }
+.platforms img { width: 210px; height: 115px; padding: 18px; object-fit: contain; background: #fff; box-shadow: 0 7px 20px #0002; }
+.hosting-service-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+.hosting-service-columns article { padding: 34px; background: #fffffff0; border-top: 4px solid #347c3c; }
+.hosting-service-columns ul { margin: 22px 0 0; padding-left: 24px; font: 700 19px/1.8 'Josefin Slab', serif; }
+.detail-cta { padding: 56px 60px; display: flex; justify-content: space-between; align-items: center; gap: 40px; background: #347c3c; color: #fff; }
+.detail-cta h2 { margin: 8px 0 0; font: 500 clamp(31px, 5vw, 44px)/1.1 'Brandon Grot', Avenir, sans-serif; }
+.detail-cta > div:last-child { display: grid; justify-items: center; gap: 10px; }
+.detail-cta .book-button { border-color: #fff; background: #fff; color: #282626; }
+.commercial-hero { padding: 62px 55px; display: grid; grid-template-columns: 1fr minmax(280px, 390px); align-items: center; gap: 52px; }
+.commercial-hero h1 { margin-inline: 0; }
+.commercial-hero > div > p:not(.small-title) { font: 700 19px/1.5 'Josefin Slab', serif; }
+.commercial-hero > img { width: 100%; max-height: 650px; object-fit: contain; box-shadow: 0 9px 28px #0002; }
+.turnover-services { padding: 72px 55px; }
+.turnover-services .residential-service-list { grid-template-columns: repeat(2, 1fr); }
+.commercial-extras { padding: 65px 55px; display: grid; grid-template-columns: 1fr 1fr; gap: 25px; background: #eff0f1; }
+.commercial-extras article { padding: 32px; background: #fff; border-top: 4px solid #347c3c; }
+.commercial-extras p:last-child { font: 600 17px/1.55 'Josefin Slab', serif; }
+.commercial-gallery { padding: 70px 45px 78px; background: #282626; color: #fff; }
+.commercial-photo-grid { display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 230px; gap: 14px; }
+.commercial-photo-grid img { width: 100%; height: 100%; object-fit: cover; }
+.commercial-photo-grid img:nth-child(1), .commercial-photo-grid img:nth-child(2) { grid-column: span 3; }
+.commercial-photo-grid img:nth-child(n+3) { grid-column: span 2; }
+
 @media (max-width: 760px) {
   .site-header { min-height: 72px; padding: 10px 16px; }
   .brand img { width: 109px; height: 46px; }
@@ -106,8 +202,50 @@ footer p { margin: 8px 0 0; font-size: 13px; }
   .contact { padding: 52px 22px; }
   form { grid-template-columns: 1fr; gap: 22px; }
   .wide, form button { grid-column: 1; }
+  .stay-page-shell { background-attachment: scroll; }
+  .stay-hero { min-height: 520px; }
+  .stay-hero-content { padding: 68px 24px 58px; }
+  .stay-hero h1 { font-size: clamp(42px, 12vw, 62px); }
+  .stay-listings { padding: 58px 20px 64px; }
+  .stay-grid { grid-template-columns: 1fr; gap: 18px; }
+  .stay-card { min-height: 0; padding: 26px 23px 25px; }
+  .stay-region { margin-top: 24px; }
+  .stay-help { padding: 50px 24px; align-items: stretch; flex-direction: column; text-align: center; }
+  .residential-hero { padding: 52px 22px; grid-template-columns: 1fr; gap: 35px; text-align: center; }
+  .residential-hero > img { max-height: 620px; }
+  .residential-services { padding: 55px 20px 60px; }
+  .residential-service-list { grid-template-columns: 1fr; }
+  .residential-schedule { padding: 55px 22px; grid-template-columns: 1fr; }
+  .residential-schedule img { height: 320px; }
+  .residential-gallery { padding: 58px 20px 64px; }
+  .residential-photo-grid { grid-template-columns: 1fr; }
+  .residential-photo-grid img { height: min(82vw, 390px); }
+  .cabinet-cleaning { grid-template-columns: 1fr 1fr; }
+  .cabinet-cleaning > div { grid-column: 1 / -1; text-align: center; }
+  .cabinet-cleaning img { height: 190px; }
+  .linen-service { padding: 52px 22px; grid-template-columns: 1fr; gap: 18px; text-align: center; }
+  .detail-hero { padding: 62px 22px; }
+  .hosting-rate { padding: 52px 24px; grid-template-columns: 1fr; justify-items: center; text-align: center; }
+  .hosting-service-columns { grid-template-columns: 1fr; }
+  .platforms { gap: 16px; }
+  .platforms img { width: min(44%, 190px); height: 100px; }
+  .detail-cta { padding: 50px 24px; flex-direction: column; text-align: center; }
+  .commercial-hero { padding: 52px 22px; grid-template-columns: 1fr; text-align: center; }
+  .turnover-services { padding: 55px 20px; }
+  .turnover-services .residential-service-list { grid-template-columns: 1fr; }
+  .commercial-extras { padding: 52px 20px; grid-template-columns: 1fr; }
+  .commercial-gallery { padding: 55px 20px 62px; }
+  .commercial-photo-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 220px; }
+  .commercial-photo-grid img:nth-child(n) { grid-column: auto; }
+  .commercial-photo-grid img:last-child { grid-column: 1 / -1; }
 }
 
 @media (max-width: 480px) {
   .proof-grid { grid-template-columns: 1fr; }
+  .cabinet-cleaning { grid-template-columns: 1fr; }
+  .cabinet-cleaning > div { grid-column: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stay-hero-media video { display: none; }
 }
