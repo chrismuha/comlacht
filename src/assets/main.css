@@ -1,4 +1,5 @@
 @import url('fonts/stylesheet.css');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Josefin+Slab:ital,wght@0,400;0,600;0,700;1,600;1,700&display=swap');
 
 :root { color: #282626; font-family: Avenir, Arial, sans-serif; font-synthesis: none; }
 * { box-sizing: border-box; }
@@ -10,7 +11,7 @@ button, input, select, textarea { font: inherit; }
 .marble { background: #f6f6f4 url('./images/wix-hero.jpg') center / cover; }
 
 .site-header { min-height: 90px; padding: 14px 28px; display: flex; align-items: center; gap: 28px; background: #fff; border-bottom: 1px solid #ddd; position: relative; z-index: 10; }
-.brand img { width: 145px; display: block; }
+.brand img { width: 109px; height: 46px; object-fit: contain; display: block; }
 .site-header nav { margin-left: auto; display: flex; align-items: center; justify-content: flex-end; gap: 25px; }
 .site-header nav a { color: #282626; text-decoration: none; font-size: 14px; font-weight: 500; white-space: nowrap; }
 .site-header nav a:hover { color: #2f7135; }
@@ -18,11 +19,11 @@ button, input, select, textarea { font: inherit; }
 .menu-button span { width: 27px; height: 2px; background: #282626; display: block; margin: 6px; }
 
 .intro { min-height: 450px; padding: 58px 32px 48px; text-align: center; border-bottom: 1px solid #d0d0d0; }
-.eyebrow { margin: 0 0 30px; font: 500 clamp(24px, 4vw, 38px)/1.2 Georgia, serif; letter-spacing: .04em; }
-.intro-row { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: 1fr 210px 1fr; align-items: center; gap: 28px; }
-.intro-row p { font: italic 600 17px Georgia, serif; }
-.intro-row img { width: 210px; box-shadow: 0 3px 13px #0003; }
-.wordmark { width: 290px; max-width: 70%; margin: 22px auto 25px; display: block; mix-blend-mode: multiply; }
+.eyebrow { margin: 0 0 30px; font: 600 clamp(24px, 4vw, 38px)/1.2 'Josefin Slab', serif; letter-spacing: .04em; }
+.intro-row { max-width: 700px; margin: 0 auto; display: grid; grid-template-columns: 1fr 219px 1fr; align-items: center; gap: 28px; }
+.intro-row p { font: italic 600 17px 'Josefin Slab', serif; }
+.intro-row img { width: 219px; height: 92px; object-fit: contain; box-shadow: 0 3px 13px #0003; }
+.wordmark { width: 406px; height: 167px; object-fit: contain; max-width: 70%; margin: 22px auto 25px; display: block; mix-blend-mode: multiply; opacity: .2; }
 .book-button { display: inline-block; padding: 13px 38px; border: 2px solid #323232; border-radius: 24px; background: #323232; color: white; text-decoration: none; font-weight: 700; letter-spacing: .08em; transition: .2s; }
 .book-button:hover { color: #323232; background: white; }
 
@@ -30,34 +31,34 @@ button, input, select, textarea { font: inherit; }
 .small-title { margin: 0; font-size: 17px; letter-spacing: .25em; }
 .about h1 { margin: 8px 0 17px; font: 500 clamp(37px, 7vw, 58px)/1.05 'Brandon Grot', Avenir, sans-serif; letter-spacing: .04em; }
 .phone { display: inline-block; margin-bottom: 32px; color: #2f7135; font-size: clamp(28px, 5vw, 38px); font-weight: 700; }
-.lead { max-width: 790px; margin: 0 auto 27px; font: 600 clamp(20px, 3.2vw, 27px)/1.45 Georgia, serif; }
-.counties { max-width: 760px; margin: 0 auto 14px; font: 600 20px/1.5 Georgia, serif; }
+.lead { max-width: 790px; margin: 0 auto 27px; font: 700 clamp(20px, 3.2vw, 27px)/1.45 'Josefin Slab', serif; }
+.counties { max-width: 760px; margin: 0 auto 14px; font: 700 20px/1.5 'Josefin Slab', serif; }
 
 .services { padding: 60px 45px 55px; text-align: center; border-block: 1px solid #d0d0d0; }
-.services h2 { margin: 0 0 42px; font: 500 clamp(40px, 7vw, 62px)/1 Avenir, sans-serif; text-decoration: underline; letter-spacing: .04em; }
+.services h2 { margin: 0 0 42px; font: 400 clamp(40px, 7vw, 62px)/1 Anton, sans-serif; text-decoration: underline; letter-spacing: .04em; }
 .services-grid { display: grid; grid-template-columns: 1fr 225px 1fr; justify-content: center; align-items: center; gap: 35px; }
-.services-grid > img { width: 225px; border-radius: 50%; }
+.services-grid > img { width: 225px; height: 211px; object-fit: contain; }
 .service-list { display: grid; gap: 14px; }
 .service-list a { min-height: 40px; display: grid; place-items: center; padding: 8px 12px; background: #292929; border: 1px solid #347c3c; color: white; text-decoration: none; font-size: 16px; transition: .2s; }
 .service-list a:hover { background: white; color: #292929; }
-.service-contact { margin: 42px 0 5px; font: 600 20px/1.55 Georgia, serif; }
+.service-contact { margin: 42px 0 5px; font: 700 20px/1.55 'Josefin Slab', serif; }
 .service-contact a { font-size: 31px; color: #2f7135; }
-.service-email { margin: 4px 0; font: 600 21px Georgia, serif; }
+.service-email { margin: 4px 0; font: 700 21px 'Josefin Slab', serif; }
 
 .contact { padding: 65px 60px 70px; background: #eff0f1; }
 .contact-heading { text-align: center; margin-bottom: 44px; }
-.contact-heading p { margin: 0 0 5px; font: italic 17px Georgia, serif; }
-.contact-heading h2 { margin: 0 0 12px; font: 500 clamp(31px, 5vw, 46px) Georgia, serif; }
+.contact-heading p { margin: 0 0 5px; font: italic 600 17px 'Josefin Slab', serif; }
+.contact-heading h2 { margin: 0 0 12px; font: 500 clamp(31px, 5vw, 46px) 'Brandon Grot', Avenir, sans-serif; }
 .contact-heading a { color: #2f7135; font-size: 23px; font-weight: 700; }
 form { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 30px; }
-label { display: grid; gap: 8px; font: italic 700 15px Georgia, serif; }
+label { display: grid; gap: 8px; font: italic 700 15px 'Josefin Slab', serif; }
 input, select, textarea { width: 100%; border: 0; border-bottom: 1px solid #777; border-radius: 0; padding: 12px 4px; background: white; color: #282626; outline: none; }
 input:focus, select:focus, textarea:focus { border-bottom: 2px solid #2f7135; }
 .wide { grid-column: 1 / -1; }
 form button { grid-column: 1 / -1; width: 130px; height: 46px; margin: 0 auto; border: 2px solid #323232; border-radius: 23px; background: transparent; cursor: pointer; }
 form button:hover { background: #323232; color: white; }
 .thanks { text-align: center; padding: 45px 0; }
-.thanks h3 { font: 500 30px Georgia, serif; }
+.thanks h3 { font: 500 30px 'Brandon Grot', Avenir, sans-serif; }
 .thanks a { color: #2f7135; }
 footer { padding: 30px; text-align: center; background: #fff; color: #666; }
 footer img { width: 120px; }
@@ -65,7 +66,7 @@ footer p { margin: 8px 0 0; font-size: 13px; }
 
 @media (max-width: 760px) {
   .site-header { min-height: 72px; padding: 10px 16px; }
-  .brand img { width: 120px; }
+  .brand img { width: 109px; height: 46px; }
   .menu-button { display: block; }
   .site-header nav { display: none; position: absolute; inset: 72px 0 auto; padding: 16px 20px 22px; background: white; box-shadow: 0 8px 14px #0002; flex-direction: column; align-items: stretch; gap: 0; }
   .site-header nav.open { display: flex; }

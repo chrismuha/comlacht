@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 import logo from '@/assets/images/logo.jpg'
-import wordmark from '@/assets/images/wix-wordmark.jpg'
 import chamberBadge from '@/assets/images/badge.jpg'
 
 const menuOpen = ref(false)
@@ -49,7 +48,7 @@ function submitForm(event) {
           <img :src="logo" alt="Comlacht logo" />
           <p>Owner Operated</p>
         </div>
-        <img class="wordmark" :src="wordmark" alt="Comlacht" />
+        <img class="wordmark" :src="logo" alt="Comlacht" />
         <a class="book-button" href="https://calendar.google.com/calendar/u/0?cid=NzQ0OTlmYjk2NTZiZjhiMTdhZWYzYjMzZWZhMTA0OTllNTg2ZDYxNjAyNzY4ZjZkZGVlMGMwZTFkMjc3NTk1ZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t" target="_blank" rel="noopener">BOOK NOW</a>
       </section>
 
