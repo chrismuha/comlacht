@@ -45,8 +45,10 @@ button, input, select, textarea { font: inherit; }
 
 .services { padding: 60px 45px 55px; text-align: center; border-block: 1px solid #d0d0d0; }
 .services h2 { margin: 0 0 42px; font: 400 clamp(40px, 7vw, 62px)/1 Anton, sans-serif; text-decoration: underline; letter-spacing: .04em; }
-.services-grid { display: grid; grid-template-columns: 1fr 225px 1fr; justify-content: center; align-items: center; gap: 35px; }
-.services-grid > img { width: 225px; height: 211px; object-fit: contain; }
+.services-grid { display: grid; grid-template-columns: 1fr 1fr; justify-content: center; align-items: start; gap: 22px 35px; }
+.services-grid > img { grid-column: 1 / -1; grid-row: 2; width: 225px; height: 211px; margin: 8px auto 0; object-fit: contain; }
+.services-grid .service-list:first-child { grid-column: 1; grid-row: 1; }
+.services-grid .service-list:last-child { grid-column: 2; grid-row: 1; }
 .service-list { display: grid; gap: 14px; }
 .service-list a { min-height: 40px; display: grid; place-items: center; padding: 8px 12px; background: #292929; border: 1px solid #347c3c; color: white; text-decoration: none; font-size: 16px; transition: .2s; }
 .service-list a:hover { background: white; color: #292929; }
@@ -96,7 +98,9 @@ footer p { margin: 8px 0 0; font-size: 13px; }
   .proof-grid { grid-template-columns: 1fr 1fr; }
   .services { padding: 48px 20px; }
   .services-grid { grid-template-columns: 1fr; gap: 22px; }
-  .services-grid > img { grid-row: 2; margin: 0 auto; width: 190px; }
+  .services-grid .service-list:first-child { grid-column: 1; grid-row: 1; }
+  .services-grid .service-list:last-child { grid-column: 1; grid-row: 2; }
+  .services-grid > img { grid-column: 1; grid-row: 3; margin: 0 auto; width: 190px; }
   .places-to-stay { padding: 52px 20px; }
   .stay-copy { padding: 42px 22px; }
   .contact { padding: 52px 22px; }
