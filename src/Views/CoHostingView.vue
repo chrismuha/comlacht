@@ -8,21 +8,12 @@ import vrboLogo from '@/assets/images/vrbo-logo.png'
 <template>
   <div class="site-shell detail-page-shell">
     <SiteHeader />
-    <main>
+    <main id="main-content" tabindex="-1">
       <section class="detail-hero marble">
         <p class="small-title">CO-HOSTING &amp; PROPERTY MANAGEMENT</p>
         <h1>Local support for every guest stay</h1>
         <p>Comlacht helps Northern New York short-term rental owners manage listings, guests, cleaning, and the details between stays.</p>
         <a class="book-button" href="tel:+13157772989">TALK WITH COMLACHT</a>
-      </section>
-
-      <section class="hosting-rate">
-        <div class="rate-mark"><strong>10%</strong><span>of total stay</span></div>
-        <div>
-          <p class="small-title">STRAIGHTFORWARD PRICING</p>
-          <h2>Co-hosting and property management</h2>
-          <p>The co-hosting and property management rate is 10 percent of the total stay.</p>
-        </div>
       </section>
 
       <section class="hosting-services">
@@ -42,6 +33,15 @@ import vrboLogo from '@/assets/images/vrbo-logo.png'
             <ul><li>Maintenance and repairs</li><li>Purchasing and restocking amenities</li></ul>
           </article>
         </div>
+      </section>
+
+      <section class="hosting-rate">
+        <div>
+          <p class="small-title">STRAIGHTFORWARD PRICING</p>
+          <h2>Simple pricing for complete support</h2>
+          <p>The co-hosting and property management rate is 10 percent of the total stay.</p>
+        </div>
+        <div class="rate-mark"><strong>10%</strong><span>of total stay</span></div>
       </section>
 
       <section class="detail-cta">

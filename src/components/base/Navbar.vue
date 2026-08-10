@@ -14,7 +14,7 @@
         </div>
         <div class="logo">
             <router-link to="/">
-                <img src="/src/assets/images/logo.jpg" alt="logo">
+                <img src="/src/assets/images/logo2.jpg" alt="Comlacht logo">
             </router-link>
             <h1>BUSINESS NAME</h1>
             <p>BUSINESS SLOGAN</p>

@@ -1,7 +1,6 @@
 <script setup>
 import SiteHeader from '@/components/base/SiteHeader.vue'
 import SiteFooter from '@/components/base/SiteFooter.vue'
-import serviceSheet from '@/assets/images/vacation-service-sheet.jpg'
 import photo1 from '@/assets/images/vacation-01.jpeg'
 import photo2 from '@/assets/images/vacation-02.jpg'
 import photo3 from '@/assets/images/vacation-03.jpg'
@@ -22,7 +21,7 @@ const turnoverServices = [
 <template>
   <div class="site-shell detail-page-shell">
     <SiteHeader />
-    <main>
+    <main id="main-content" tabindex="-1">
       <section class="commercial-hero marble">
         <div>
           <p class="small-title">VACATION RENTAL &amp; COMMERCIAL</p>
@@ -30,7 +29,7 @@ const turnoverServices = [
           <p>Guest-ready cleaning and property care with essential tasks prioritized at every turnover and finer details completed throughout the month.</p>
           <a class="book-button" href="tel:+13157772989">REQUEST SERVICE</a>
         </div>
-        <img :src="serviceSheet" alt="Original Comlacht vacation rental turnover service sheet" />
+        <img :src="photo1" alt="Guest-ready vacation rental prepared by Comlacht" />
       </section>
 
       <section class="turnover-services">

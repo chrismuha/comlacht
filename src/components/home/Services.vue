@@ -9,7 +9,7 @@
                 <br> <a href="">service 4</a>
             </div>
             <div class="image">
-                <img src="../../assets/images/badge.jpg" alt="Badge">
+                <img src="../../assets/images/badge.jpg" alt="Lewis County Chamber of Commerce">
             </div>
             <div class="column; column2">
                 <a href="">Service 1</a>

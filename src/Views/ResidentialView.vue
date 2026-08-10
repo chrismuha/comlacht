@@ -1,7 +1,6 @@
 <script setup>
 import SiteHeader from '@/components/base/SiteHeader.vue'
 import SiteFooter from '@/components/base/SiteFooter.vue'
-import serviceSheet from '@/assets/images/residential-hero.jpg'
 import kitchen from '@/assets/images/residential-01.jpg'
 import carpet from '@/assets/images/residential-02.jpg'
 import bathroom from '@/assets/images/residential-03.jpg'
@@ -23,7 +22,7 @@ const deepCleaning = [
 <template>
   <div class="site-shell residential-page-shell">
     <SiteHeader />
-    <main>
+    <main id="main-content" tabindex="-1">
       <section class="residential-hero marble">
         <div class="residential-hero-copy">
           <p class="small-title">COMLACHT RESIDENTIAL</p>
@@ -31,7 +30,7 @@ const deepCleaning = [
           <p>Detailed residential cleaning for Northern New York homes, with weekly and biweekly service available.</p>
           <a class="book-button" href="tel:+13157772989">CALL 315-777-2989</a>
         </div>
-        <img :src="serviceSheet" alt="Original Comlacht residential cleaning service sheet" />
+        <img :src="kitchen" alt="Bright, professionally cleaned residential kitchen" />
       </section>
 
       <section class="residential-services" aria-labelledby="residential-services-title">
@@ -49,7 +48,7 @@ const deepCleaning = [
         <div>
           <p class="small-title">ONGOING CARE</p>
           <h2>Periodically scheduled maintenance cleaning</h2>
-          <p>Maintenance and upkeep cleaning is available after the initial deep-clean visit. Choose weekly, biweekly, monthly, every six months, quarterly, or annual service.</p>
+          <p class="maintenance-copy">Maintenance and upkeep cleaning is available after the initial deep-clean visit. Choose weekly, biweekly, monthly, every six months, quarterly, or annual service.</p>
           <p class="minimum-fee">$100 minimum fee</p>
         </div>
         <img :src="kitchen" alt="Clean residential kitchen completed by Comlacht" />
