@@ -11,6 +11,9 @@ const slides = [
 const currentIndex = ref(0)
 const slider = ref(null)
 let scrollFrame = null
+let dragging = false
+let dragStartX = 0
+let dragStartScroll = 0
 
 function show(index) {
   const nextIndex = (index + slides.length) % slides.length
@@ -28,6 +31,29 @@ function syncCurrentSlide() {
     currentIndex.value = Math.round(slider.value.scrollLeft / slider.value.clientWidth)
   })
 }
+
+function startMouseDrag(event) {
+  if (event.pointerType !== 'mouse' || event.button !== 0 || event.target.closest('a, button')) return
+  dragging = true
+  dragStartX = event.clientX
+  dragStartScroll = slider.value.scrollLeft
+  slider.value.classList.add('dragging')
+  slider.value.setPointerCapture(event.pointerId)
+}
+
+function moveMouseDrag(event) {
+  if (!dragging) return
+  event.preventDefault()
+  slider.value.scrollLeft = dragStartScroll - (event.clientX - dragStartX)
+}
+
+function endMouseDrag(event) {
+  if (!dragging) return
+  dragging = false
+  slider.value.classList.remove('dragging')
+  if (slider.value.hasPointerCapture?.(event.pointerId)) slider.value.releasePointerCapture(event.pointerId)
+  show(Math.round(slider.value.scrollLeft / slider.value.clientWidth))
+}
 </script>
 
 <template>
@@ -40,7 +66,7 @@ function syncCurrentSlide() {
 
     <div class="gallery-frame">
       <button type="button" class="gallery-arrow previous" aria-label="Previous project category" @click="show(currentIndex - 1)">←</button>
-      <div ref="slider" class="gallery-slider" tabindex="0" aria-roledescription="carousel" aria-label="Comlacht project categories" @keydown.left.prevent="show(currentIndex - 1)" @keydown.right.prevent="show(currentIndex + 1)" @scroll.passive="syncCurrentSlide">
+      <div ref="slider" class="gallery-slider" tabindex="0" aria-roledescription="carousel" aria-label="Comlacht project categories" @keydown.left.prevent="show(currentIndex - 1)" @keydown.right.prevent="show(currentIndex + 1)" @scroll.passive="syncCurrentSlide" @pointerdown="startMouseDrag" @pointermove="moveMouseDrag" @pointerup="endMouseDrag" @pointercancel="endMouseDrag">
         <div class="gallery-track">
           <article v-for="(slide, index) in slides" :key="slide.title" class="gallery-slide" :aria-hidden="index !== currentIndex">
             <div class="photo-slot" aria-hidden="true">
@@ -74,6 +100,8 @@ function syncCurrentSlide() {
 .gallery-slider { width: 100%; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; scrollbar-width: none; touch-action: pan-x pan-y; cursor: grab; outline-offset: -4px; }
 .gallery-slider::-webkit-scrollbar { display: none; }
 .gallery-slider:active { cursor: grabbing; }
+.gallery-slider.dragging { scroll-snap-type: none; scroll-behavior: auto; user-select: none; }
+.gallery-slider.dragging * { pointer-events: none; }
 .gallery-track { display: flex; }
 .gallery-slide { min-width: 100%; padding: 0 90px; display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(230px, .75fr); align-items: stretch; scroll-snap-align: start; scroll-snap-stop: always; }
 .photo-slot { min-height: 420px; display: grid; place-content: center; gap: 12px; text-align: center; background: linear-gradient(#ffffff12, #ffffff08), url('../../assets/images/wix-hero.jpg') center / cover; border: 1px solid #ffffff40; color: #347c3c; }

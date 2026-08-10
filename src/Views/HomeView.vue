@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import logo from '@/assets/images/logo.jpg'
 import chamberBadge from '@/assets/images/badge.jpg'
 import ProjectGallery from '@/components/home/ProjectGallery.vue'
+import Testimonials from '@/components/home/Testimonials.vue'
 import SiteHeader from '@/components/base/SiteHeader.vue'
 import SiteFooter from '@/components/base/SiteFooter.vue'
 
@@ -98,6 +99,8 @@ function submitForm(event) {
       </section>
 
       <ProjectGallery />
+
+      <Testimonials />
 
       <section id="places-to-stay" class="places-to-stay marble">
         <div class="stay-copy">
