@@ -53,7 +53,7 @@ function submitForm(event) {
       </section>
 
       <section class="about">
-        <div class="about-heading"><p class="small-title">THE COMLACHT STANDARD</p><h2>Thoughtful service.<br />Noticeable results.</h2></div>
+        <div class="about-heading"><p class="small-title">THE COMLACHT STANDARD</p><h2><span>Thoughtful service.</span><span>Noticeable results.</span></h2></div>
         <div class="about-copy"><p class="lead">We handle the details that make a property feel cared for—from deep cleans to guest-ready turnovers and day-to-day hosting support.</p><p>Owned and operated out of Lewis County, New York, serving Lewis, Jefferson, Herkimer, Hamilton, Oneida and St. Lawrence counties.</p></div>
       </section>
 
