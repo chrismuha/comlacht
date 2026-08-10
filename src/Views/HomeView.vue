@@ -6,6 +6,7 @@ import detailImage from '@/assets/images/vacation-01.jpeg'
 import ProjectGallery from '@/components/home/ProjectGallery.vue'
 import SiteHeader from '@/components/base/SiteHeader.vue'
 import SiteFooter from '@/components/base/SiteFooter.vue'
+import PageNext from '@/components/base/PageNext.vue'
 
 const formStatus = ref('')
 
@@ -139,6 +140,7 @@ function submitForm(event) {
           <p class="form-status" aria-live="polite">{{ formStatus }}</p>
         </form>
       </section>
+      <PageNext title="Explore vacation rental service" to="/vacation-rental" />
     </main>
 
     <SiteFooter />

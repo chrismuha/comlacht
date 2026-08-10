@@ -1,6 +1,7 @@
 <script setup>
 import SiteHeader from '@/components/base/SiteHeader.vue'
 import SiteFooter from '@/components/base/SiteFooter.vue'
+import PageNext from '@/components/base/PageNext.vue'
 import photo1 from '@/assets/images/vacation-01.jpeg'
 import photo2 from '@/assets/images/vacation-02.jpg'
 import photo3 from '@/assets/images/vacation-03.jpg'
@@ -56,6 +57,7 @@ const turnoverServices = [
           <img :src="photo5" alt="Vacation rental room after turnover cleaning" />
         </div>
       </section>
+      <PageNext title="Explore residential cleaning" to="/residential" />
     </main>
     <SiteFooter />
   </div>

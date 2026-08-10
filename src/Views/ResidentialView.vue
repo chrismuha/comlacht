@@ -1,6 +1,7 @@
 <script setup>
 import SiteHeader from '@/components/base/SiteHeader.vue'
 import SiteFooter from '@/components/base/SiteFooter.vue'
+import PageNext from '@/components/base/PageNext.vue'
 import kitchen from '@/assets/images/residential-01.jpg'
 import carpet from '@/assets/images/residential-02.jpg'
 import bathroom from '@/assets/images/residential-03.jpg'
@@ -84,6 +85,7 @@ const deepCleaning = [
           <p>Linen closets and storage spaces can also be organized and decluttered.</p>
         </div>
       </section>
+      <PageNext title="Explore co-hosting &amp; management" to="/co-hosting" />
     </main>
     <SiteFooter />
   </div>

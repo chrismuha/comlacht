@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import SiteHeader from '@/components/base/SiteHeader.vue'
 import SiteFooter from '@/components/base/SiteFooter.vue'
+import PageNext from '@/components/base/PageNext.vue'
 import forestPoster from '@/assets/images/region-poster.jpg'
 import stay1 from '@/assets/images/vacation-01.jpeg'
 import stay2 from '@/assets/images/vacation-02.jpg'
@@ -155,6 +156,7 @@ function endDrag(event, stayIndex) {
           <a href="mailto:comlacht@gmail.com">comlacht@gmail.com</a>
         </div>
       </section>
+      <PageNext title="See client satisfaction" to="/client-satisfaction" />
     </main>
     <SiteFooter />
   </div>

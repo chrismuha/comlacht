@@ -55,6 +55,7 @@ function handleMenuKeydown(event) {
         <router-link to="/residential">Residential</router-link>
         <router-link to="/co-hosting">Co-Hosting</router-link>
         <router-link to="/places-to-stay">Places to Stay</router-link>
+        <router-link to="/client-satisfaction">Client Satisfaction</router-link>
         <router-link class="nav-contact" to="/#contact">Request a quote <span>→</span></router-link>
       </nav>
     </div>

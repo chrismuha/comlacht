@@ -1,6 +1,7 @@
 <script setup>
 import SiteHeader from '@/components/base/SiteHeader.vue'
 import SiteFooter from '@/components/base/SiteFooter.vue'
+import PageNext from '@/components/base/PageNext.vue'
 import airbnbLogo from '@/assets/images/airbnb-logo.png'
 import vrboLogo from '@/assets/images/vrbo-logo.png'
 </script>
@@ -48,6 +49,7 @@ import vrboLogo from '@/assets/images/vrbo-logo.png'
         <div><p class="small-title">OWNER OPERATED</p><h2>Keep your property guest-ready.</h2></div>
         <div><a class="book-button" href="tel:+13157772989">CALL 315-777-2989</a><a href="mailto:comlacht@gmail.com">comlacht@gmail.com</a></div>
       </section>
+      <PageNext title="Explore places to stay" to="/places-to-stay" />
     </main>
     <SiteFooter />
   </div>

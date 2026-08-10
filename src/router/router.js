@@ -3,6 +3,7 @@ import PlacesToStayView from '@/Views/PlacesToStayView.vue';
 import ResidentialView from '@/Views/ResidentialView.vue';
 import CoHostingView from '@/Views/CoHostingView.vue';
 import CommercialView from '@/Views/CommercialView.vue';
+import ClientSatisfactionView from '@/Views/ClientSatisfactionView.vue';
 import { createWebHashHistory, createRouter } from 'vue-router'
 
 const routes = [
@@ -12,6 +13,7 @@ const routes = [
   { path: '/co-hosting', component: CoHostingView, meta: { title: 'Co-Hosting & Property Management | Comlacht', description: 'Local co-hosting, guest communication, cleaning, and property support.' } },
   { path: '/commercial', component: CommercialView, meta: { title: 'Commercial Cleaning | Comlacht', description: 'Dependable commercial and hospitality-focused cleaning services.' } },
   { path: '/vacation-rental', component: CommercialView, meta: { title: 'Vacation Rental Turnovers | Comlacht', description: 'Guest-ready vacation rental turnover cleaning with same-day service available.' } },
+  { path: '/client-satisfaction', component: ClientSatisfactionView, meta: { title: 'Client Satisfaction | Comlacht', description: 'Client feedback and experiences with Comlacht property care services.' } },
 ]
 
 const router = createRouter({

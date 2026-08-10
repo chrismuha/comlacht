@@ -675,3 +675,33 @@ input:focus-visible, select:focus-visible, textarea:focus-visible { background: 
 .linen-service > div:last-child { max-width: 960px; }
 .linen-service > div:last-child p { font-size: clamp(21px, 2vw, 27px) !important; line-height: 1.65 !important; }
 .linen-service > div:last-child p + p { margin-top: 24px; }
+
+/* Guided page flow */
+.next-page { background: var(--paper); border-top: 1px solid var(--line); }
+.next-page > a { min-height: 260px; padding: clamp(55px, 7vw, 105px) clamp(30px, 8vw, 125px); display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 30px; color: var(--forest-deep); text-decoration: none; }
+.next-page span { grid-column: 1; margin-bottom: 14px; color: #52705d; font-size: 13px; font-weight: 900; letter-spacing: .18em; }
+.next-page strong { grid-column: 1; font: 600 clamp(38px, 5vw, 72px)/1.08 Avenir, Arial, sans-serif; }
+.next-page b { grid-column: 2; grid-row: 1 / 3; font-size: clamp(48px, 6vw, 86px); font-weight: 300; transition: transform .25s; }
+.next-page > a:hover, .next-page > a:focus-visible { background: var(--sage); }
+.next-page > a:hover b, .next-page > a:focus-visible b { transform: translateX(12px); }
+
+/* Client satisfaction */
+.satisfaction-hero { padding: clamp(100px, 12vw, 180px) 30px; text-align: center; background: var(--cream); }
+.satisfaction-hero h1 { max-width: 1050px; margin: 16px auto 28px; font-size: clamp(52px, 7vw, 100px); }
+.satisfaction-hero > p:last-child { max-width: 900px; margin: 0 auto; color: #425047; font-size: clamp(19px, 2vw, 25px); line-height: 1.7; }
+.satisfaction-page-shell .testimonials { background: var(--paper); }
+.satisfaction-page-shell .testimonial-heading > p:first-child { color: #235b34 !important; font-size: 14px !important; }
+.satisfaction-page-shell .testimonial-heading > p:last-child,
+.satisfaction-page-shell .testimonial-slide > p:not(.testimonial-audience) { color: #26362c !important; font-family: Avenir, Arial, sans-serif !important; font-size: 19px !important; line-height: 1.7 !important; }
+.satisfaction-invitation { padding: clamp(85px, 10vw, 145px) 30px; text-align: center; background: var(--sage); }
+.satisfaction-invitation h2 { margin: 14px 0 22px; font-size: clamp(46px, 6vw, 82px); }
+.satisfaction-invitation > p:not(.small-title) { max-width: 760px; margin: 0 auto 34px; font-size: 20px; }
+
+/* Prominent rental booking action */
+.property-copy > a { min-width: min(100%, 330px); padding: 22px 30px; font-size: 18px; text-align: center; box-shadow: 0 10px 28px rgba(12,42,29,.18); }
+
+@media (max-width: 760px) {
+  .next-page > a { min-height: 220px; padding-inline: 24px; }
+  .next-page b { font-size: 48px; }
+  .property-copy > a { width: 100%; }
+}
