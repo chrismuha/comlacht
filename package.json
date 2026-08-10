@@ -27,7 +27,7 @@
   "homepage": "https://github.com/chrismuha/vue-website-template-8#readme",
   "dependencies": {
     "vue": "^3.5.13",
-    "vue-router": "^4.6.4"
+    "vue-router": "^5.2.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.3",
