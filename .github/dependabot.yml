@@ -8,6 +8,11 @@ updates:
     commit-message:
       prefix: "deps"
     rebase-strategy: "auto"
+    ignore:
+      - dependency-name: "vue-router"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "vite"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
