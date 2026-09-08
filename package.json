@@ -4,9 +4,9 @@
   "description": "This template should help get you started developing with Vue 3 in Vite.",
   "main": "index.js",
   "scripts": {
-    "dev": "vite --host 127.0.0.1 --port 5205",
+    "dev": "vite --host 127.0.0.1 --port 5205 --strictPort",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --host 127.0.0.1 --port 5205 --strictPort"
   },
   "repository": {
     "type": "git",
