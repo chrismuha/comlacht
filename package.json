@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5205 --strictPort",
     "build": "vite build",
-    "preview": "vite preview --host 127.0.0.1 --port 5205 --strictPort"
+    "preview": "vite preview --host 127.0.0.1 --port 5205 --strictPort",
+    "prebuild": "node ./scripts/prepare-build-output.cjs"
   },
   "repository": {
     "type": "git",
@@ -35,5 +36,8 @@
   "overrides": {
     "nanoid": "3.3.18",
     "source-map-js": "1.2.2"
-  }
+  },
+  "mcrBuildOutputs": [
+    "dist"
+  ]
 }
